@@ -7,7 +7,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ProductsModule } from './products/products.module';
 
 @Module({
-  imports: [InitialModule, ProductModule, ProductsModule],
+  imports: [ ProductsModule, MongooseModule.forRoot('mongodb://127.0.0.1:27017/test')],
   controllers: [AppController],
   providers: [AppService],
 })
